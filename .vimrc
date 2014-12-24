@@ -1,4 +1,9 @@
 " ------------------------------
+" vi との互換性を解除
+" ------------------------------
+set nocompatible
+
+" ------------------------------
 " 表示関係
 " ------------------------------
 " 行番号の表示
@@ -25,6 +30,10 @@ set scrolloff=8
 set sidescrolloff=16
 " 左右スクロールの移動文字数
 set sidescroll=1
+" 構文に色を付ける
+syntax on
+" 256 色に対応させる
+set t_Co=256
 
 " ------------------------------
 " 操作関係
@@ -128,3 +137,35 @@ if has('kaoriya')
     " verifyenc.vim
     let plugin_verifyenc_disable=1
 endif
+
+
+" ------------------------------
+" NeoBundle の設定
+" ------------------------------
+" bundle で管理するディレクトリを指定
+set runtimepath+=$HOME/.vim/bundle/neobundle.vim
+
+" Required:
+call neobundle#begin(expand('$HOME/.vim/bundle/'))
+
+" NeoBundle を NeoBundle 自身で管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" ---------- 追加するプラグイン ----------
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+" Unite
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+
+" ------------ カラースキーム ------------
+" hybrid
+NeoBundle 'w0ng/vim-hybrid'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" 未インストールのプラグインを通知する
+NeoBundleCheck
