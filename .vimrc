@@ -3,6 +3,7 @@
 " ------------------------------
 set nocompatible
 
+
 " ------------------------------
 " 表示関係
 " ------------------------------
@@ -34,6 +35,17 @@ set sidescroll=1
 syntax on
 " 256 色に対応させる
 set t_Co=256
+" カラースキーマ設定
+" Windows は default
+" それ以外は hybrid
+if has('win32') || has('win64')
+    colorscheme default
+else
+    colorscheme hybrid
+endif
+" ステータス行の設定
+set statusline=%t\ %m\ %r\ %h\ %w\ %y\ %=L%-5l\ C%-5c\ %4P
+
 
 " ------------------------------
 " 操作関係
@@ -58,6 +70,7 @@ set smartindent
 set wildmenu
 set wildmode=list:longest,full
 
+
 " ------------------------------
 " 検索と置換関係
 " ------------------------------
@@ -74,8 +87,9 @@ set wrapscan
 " 置換の時 g コマンドをデフォルトで無効
 set nogdefault
 
+
 " ------------------------------
-" 文字コード設定
+" 文字コード関係
 " ------------------------------
 " Vim でつかう文字コード
 set encoding=utf-8
@@ -90,6 +104,7 @@ if has('win32') || has('win64')
     set iminsert=0
     set imsearch=0
 endif
+
 
 " ------------------------------
 " 環境関係
