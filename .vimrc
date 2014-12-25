@@ -39,9 +39,9 @@ set t_Co=256
 " Windows は default
 " それ以外は hybrid
 if has('win32') || has('win64')
-    colorscheme default
+	colorscheme default
 else
-    colorscheme hybrid
+	colorscheme hybrid
 endif
 " ステータス行の設定
 set statusline=%t\ %m\ %r\ %h\ %w\ %y\ %=L%-5l\ C%-5c\ %4P
@@ -54,8 +54,8 @@ set statusline=%t\ %m\ %r\ %h\ %w\ %y\ %=L%-5l\ C%-5c\ %4P
 set backspace=indent,eol,start
 " 行頭行末の左右移動で行を移動する
 set whichwrap=b,s,h,l,<,>,[,]
-" タブ文字を空白文字に変換
-set expandtab
+" タブ文字を空白文字に変換しない
+set noexpandtab
 " タブ文字の幅
 set tabstop=4
 " 自動インデントの幅
@@ -101,8 +101,8 @@ set fileencoding=utf-8
 set fileencodings+=utf-8,euc-jp,iso-2022-jp,ucs-2le,ucs-2,cp932
 " Windows のとき日本語を OFF
 if has('win32') || has('win64')
-    set iminsert=0
-    set imsearch=0
+	set iminsert=0
+	set imsearch=0
 endif
 
 
@@ -133,24 +133,24 @@ set shellslash
 " KaoriYaプラグインの無効化
 " ------------------------------
 if has('kaoriya')
-    let g:no_vimrc_example=0
-    let g:vimrc_local_finish=1
-    let g:gvimrc_local_finish=1
-    
-    " autodate.vim
-    let plugin_autodate_disable=1
-    " cmdex.vim
-    let plugin_cmdex_disable=1
-    " dicwin.vim
-    let plugin_dicwin_disable=1
-    " format.vim
-    let plugin_format_disable=1
-    " hz_ja.vim
-    let plugin_hz_ja_disable=1
-    " scrnmode.vim
-    let plugin_scrnmode_disable=1
-    " verifyenc.vim
-    let plugin_verifyenc_disable=1
+	let g:no_vimrc_example=0
+	let g:vimrc_local_finish=1
+	let g:gvimrc_local_finish=1
+	
+	" autodate.vim
+	let plugin_autodate_disable=1
+	" cmdex.vim
+	let plugin_cmdex_disable=1
+	" dicwin.vim
+	let plugin_dicwin_disable=1
+	" format.vim
+	let plugin_format_disable=1
+	" hz_ja.vim
+	let plugin_hz_ja_disable=1
+	" scrnmode.vim
+	let plugin_scrnmode_disable=1
+	" verifyenc.vim
+	let plugin_verifyenc_disable=1
 endif
 
 
