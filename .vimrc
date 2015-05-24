@@ -55,7 +55,7 @@ set backspace=indent,eol,start
 " 行頭行末の左右移動で行を移動する
 set whichwrap=b,s,h,l,<,>,[,]
 " タブ文字を空白文字に変換しない
-set noexpandtab
+set expandtab
 " タブ文字の幅
 set tabstop=4
 " 自動インデントの幅
